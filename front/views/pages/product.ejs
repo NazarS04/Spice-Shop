@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <%- include("../modules/head")%>
+    <link rel="stylesheet" href="/scss/main-product.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <%- include("../modules/header")%>
+      <main class="main">
+        <div class="main__container">
+          <section class="product">
+            <div class="product__img-container">
+              <div class="product__img">
+                <img src="/img/products-img/<%=product.img_name%>" alt="<%=product.name%>">
+              </div>
+            </div>
+            <div class="product__info">
+              <div class="product-top">
+                <div class="product-top__wrapper">
+                  <h1 class="product-top__title"><%=product.name%></h1>
+                  <div class="product-top__stars">
+                    <svg class="product-top__star">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="product-top__star">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="product-top__star">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="product-top__star">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="product-top__star">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="product-top__code">
+                  <span>Код:</span>
+                  <span class="product-top__number-code"><%=code%></span>
+                </div>
+              </div>
+              <div class="product-center">
+                <div class="product-center__price-for">
+                  Вартість за <span class="product-center__which-weight"></span>
+                </div>
+                <div class="product-center__container">
+                  <div class="product-center__params">
+                    <div class="product-center__weight">
+                      <select class="product-center__select">
+                        <option value="100" selected="">100г</option>
+                        <option value="250">250г</option>
+                        <option value="500">500г</option>
+                        <option value="1000">1 кг</option>
+                        <option value="2000">Опт від 2 до 5 кг</option>
+                        <option value="5000">Опт від 5 до 25 кг</option>
+                        <option value="25000">Опт від 25 кг</option>
+                      </select>
+                      <div class="product-center__drop-down-img">
+                        <img src="/img/dropdown.svg" alt="Іконка випадаючого меню вібору ваги продукту">
+                      </div>
+                    </div>
+                    <div class="product-center__counter">
+                      <button data-type="minus" class="product-center__button product-center__minus"><img src="/img/products/minus_product.svg" alt=""></button>
+                      <span class="product-center__quantity"></span>
+                      <button data-type="plus" class="product-center__button product-center__plus"><img src="/img/products/plus_product.svg" alt=""></button>
+                    </div>
+                  </div>
+                  <div class="product-center__wrapper">
+                    <div data-price="<%=product.price%>" class="product-center__price"></div>
+                    <button class="product-center__bt-add-cart">
+                      <img src="/img/products/buy.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-bottom">
+                <div class="product-bottom__item">
+                  <div class="product-bottom__img"><img src="/img/products/packing.svg" alt=""></div>
+                  <div class="product-bottom__text">фасуємо в день замовлення</div>
+                </div>
+                <div class="product-bottom__item">
+                  <div class="product-bottom__img"><img src="/img/products/photo.svg" alt=""></div>
+                  <div class="product-bottom__text">фото з реальних зразків</div>
+                </div>
+                <div class="product-bottom__item">
+                  <div class="product-bottom__img"><img src="/img/products/delivery.svg" alt=""></div>
+                  <div class="product-bottom__text">безкоштовна доставка від 750 грн</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <%- include("../modules/footer")%>
+    </div>
+    <%- include("../modules/header-script")%>
+    <script src="/js/main-product.js"></script>
+  </body>
+</html>

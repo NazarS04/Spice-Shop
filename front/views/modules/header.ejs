@@ -1,0 +1,89 @@
+<div class="modal-window-phones">
+    <ul class="modal-window-phones__list">
+        <li class="modal-window-phones__item">
+            <a href="tel:(063) 633 32 92">(063) 633 32 92</a>
+        </li>
+        <li class="modal-window-phones__item">
+            <a href="tel:(066) 255 52 92">(066) 255 52 92</a>
+        </li>
+        <li class="modal-window-phones__item">
+            <a href="tel:(068) 488 82 92">(068) 488 82 92</a>
+        </li>
+    </ul>
+</div>
+<header class="header">
+    <section class="brief-information">
+        <div class="brief-information__container swiper">
+            <div class="brief-information__wrapper swiper-wrapper">
+                <div class="brief-information__text swiper-slide">БЕЗКОШТОВНА ДОСТАВКА ВІД 750 ГРН УКРПОШТОЮ</div>
+                <div class="brief-information__text swiper-slide">БЕЗКОШТОВНА ДОСТАВКА ВІД 1500 ГРН НОВОЮ ПОШТОЮ</div>
+                <div class="brief-information__text swiper-slide">Можливі затримки відправлень на 1-2 дні</div>
+            </div>
+            <div class="brief-information__button-prev"></div>
+            <div class="brief-information__button-next"></div>
+        </div>
+    </section>
+    <div class="header__container">
+        <section class="header__wrapper">
+            <div class="header__head">
+                <a href="/" class="header__logo">
+                    <img src="/img/header/logo.svg" alt="Логотип">
+                </a>
+                <form class="header__search">
+                    <img src="/img/header/search.svg" alt="Значок пошуку">
+                    <input type="text" placeholder="Пошук на сайті">
+                    <button class="header__reset">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </form>
+                <div class="header__box">
+                    <div class="header__phone">
+                        <span class="header__phone_number">(066) 255 52 92 </span>
+                        <img class="header__drop_down_phones" src="/img/dropdown.svg" alt="Стрілка випадаючих номерів">
+                    </div>
+                    <div class="header__items">
+                        <div class="header__item">
+                            <a href="##"><img src="/img/header/account.svg" alt="Акаунт"></a>
+                        </div>
+                        <div class="header__item">
+                            <a href="##"><img src="/img/header/wishlist.svg" alt="Улюблені товари"></a>
+                        </div>
+                        <div class="header__item">
+                            <a href="##"><img src="/img/header/cart.svg" alt="Корзина"></a>
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+            <!--   --------------------   -->
+                    <%for(let i =0;i<categorys.length;i++){%>
+                        <li><a class="header__link" href="/<%= categorys[i].id%>"><%= categorys[i].name%></a></li>
+                    <%}%>
+            <!--   --------------------   -->
+                    <li class="header__vertical-line"></li>
+                    <li>
+                        <span class="header__link header__inform">Інформація</span>
+                        <ul class="header__inside-list">
+                            <li><a class="header__inside-link" href="/payment-delivery"><span>Оплата і доставка</span></a></li>
+                            <li><a class="header__inside-link" href="/about-us"><span>Про нас</span></a></li>
+                            <li><a class="header__inside-link" href="/cooperation"><span>Співпраця</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="header__phone-numbers">
+                    <a href="tel:(063) 633 32 92">(063) 633 32 92</a>
+                    <a href="tel:(066) 255 52 92">(066) 255 52 92</a>
+                    <a href="tel:(068) 488 82 92">(068) 488 82 92</a>
+                </div>
+            </nav>
+        </section>
+    </div>
+</header>

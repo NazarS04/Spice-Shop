@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Bluescreens";
+  src: local("Bluescreens-Bold"), url("/fonts/Bluescreens/Bluescreens-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"), url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Medium"), url("/fonts/Roboto/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"), url("/fonts/Roboto/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Regular"), url("/fonts/RobotoCondensed/RobotoCondensed-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Medium"), url("/fonts/RobotoCondensed/RobotoCondensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Bold"), url("/fonts/RobotoCondensed/RobotoCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.main__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 30px 55px 80px;
+  background: url("/img/login-registration/decor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  width: 100%;
+}
+.form__title {
+  margin-bottom: 40px;
+  font-size: 2.625rem;
+  font-family: Bluescreens, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.form__input {
+  width: 100%;
+  margin-bottom: 13px;
+}
+.form__input > input {
+  display: block;
+  width: 100%;
+  padding: 18px 25px;
+  border-radius: 30px;
+  border: 1px solid black;
+  font-family: Roboto, sans-serif;
+  font-size: 0.9375rem;
+  background-color: #f4f4f4;
+  outline: 0;
+}
+.form__input-password {
+  margin-bottom: 25px;
+}
+.form__dont-know-password {
+  margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 0.8125rem;
+  color: #acacac;
+  text-align: center;
+  cursor: pointer;
+}
+.form__submit {
+  margin-bottom: 35px;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ed5432;
+  cursor: pointer;
+}
+.form__want-to-registration {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.form__warning-massage {
+  font-family: Roboto, sans-serif;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #000;
+}
+.form__warning-massage > a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.password-input {
+  position: relative;
+}
+.password-input__eye {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .main__container {
+    padding: 30px 15px 40px;
+  }
+  .form__title {
+    margin-bottom: 20px;
+  }
+  .form input {
+    padding: 15px 25px;
+  }
+  .form__want-to-registration {
+    margin-bottom: 25px;
+  }
+}/*# sourceMappingURL=main-login.css.map */

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <%- include("../modules/head")%>
+    <link rel="stylesheet" href="/scss/main-payment-delivery.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <%- include("../modules/header")%>
+      <main class="main">
+        <div class="main__container">
+          <section class="delivery">
+            <h2 class="delivery__title title">сопособи доставки</h2>
+            <p class="delivery__text text">Доставка здійснюється наступними транспортними компаніями і службами кур'єрської доставки за тарифами перевізника. <span class="text_bold">Термін доставки 1-3 дні. Дату відправки замовлення повідомляє менеджер після оформлення замовлення.</span></p>
+            <div class="delivery__items">
+              <div class="delivery__item item-delivery">
+                <div class="item-delivery__img">
+                  <img src="/img/payment-delivery/np.svg" alt="Логотип нової почти" />
+                </div>
+                <div class="item-delivery__container">
+                  <h3 class="item-delivery__title">У відділення Нової пошти</h3>
+                  <div class="item-delivery__text"><span>Безкоштовно</span> по Україні - від 1500 грн *</div>
+                </div>
+              </div>
+              <div class="delivery__item item-delivery">
+                <div class="item-delivery__img"><img src="/img/payment-delivery/ukr.svg" alt="Логотип укр почти" /></div>
+                <div class="item-delivery__container">
+                  <h3 class="item-delivery__title">У відділення Укрпошта</h3>
+                  <div class="item-delivery__text"><span>Безкоштовно</span> по Україні - від 750 грн *</div>
+                </div>
+              </div>
+              <div class="delivery__item item-delivery item-delivery-has-time">
+                <div class="item-delivery__img"><img src="/img/payment-delivery/courier.svg" alt="Іконка доставки кур'єром" /></div>
+                <div class="item-delivery__container item-delivery__container-with-time">
+                  <h3 class="item-delivery__title">Кур'єром по Вінниці - 30 грн</h3>
+                  <div class="item-delivery__text"><span>Безкоштовно</span> по Україні - від 1500 грн *</div>
+                  <div>Час доставки - з 18:00 до 20:00.</div>
+                </div>
+              </div>
+              <div class="delivery__item item-delivery item-delivery-pickup">
+                <div class="item-delivery__img"><img src="/img/payment-delivery/pickup.svg" alt="" /></div>
+                <div class="item-delivery__container">
+                  <div class="item-delivery__wrapper">
+                    <div class="item-delivery__info">
+                      <h3 class="item-delivery__title">Самовивіз (тимчасово недоступний)</h3>
+                      <div class="item-delivery__text">лише м. Вінниця, вул.Трамвайна, 3</div>
+                    </div>
+                    <a class="item-delivery__map" href="https://www.google.com/maps/place/Avalon+5/@49.2309356,28.4375361,15z/data=!4m5!3m4!1s0x0:0x29eaee2529030ad0!8m2!3d49.23089!4d28.4375393" target="_blank">на карті</a>
+                  </div>
+                  <div class="item-delivery__text">
+                    Просимо заздалегідь уточнювати наявність товару за телефонами <a class="item-delivery__tel" href="tel:380662555292">+380 (66) 255 52 92</a>, <a class="item-delivery__tel" href="tel:380684888292">+38 (068) 488 82 92</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="delivery__ps">*При замовленні на вказану суму з урахуванням знижок на купонів. Акція не поширюється на адресну доставку, товари, замовлені за оптовою ціною, а також на комісію за переказ грошових коштів.</div>
+          </section>
+          <section class="payment-and-return">
+            <div class="payment">
+              <h2 class="payment__title title">Способи Оплати</h2>
+              <div class="payment__images">
+                <div class="payment__img"><img src="/img/payment-delivery/visa.svg" alt="Логотип карти Visa"/></div>
+                <div class="payment__img"><img src="/img/payment-delivery/mastercard.svg" alt="Логотип карти MasterCard"/></div>
+              </div>
+              <div class="payment__text text_bold">Оплата online на сайті</div>
+              <div class="payment__text text_bold">Переказ на картку</div>
+              <div class="payment__text payment__text-delivery-note">
+                <div class="text_bold">Накладний платіж</div>
+                <div>(при отриманні посилки)</div>
+              </div>
+              <div class="payment__text text_bold">Оплата на рахунок підприємства</div>
+            </div>
+            <div class="return">
+              <h2 class="return__title title">ПОВЕРНЕННЯ ТА ОБМІН ТОВАРУ</h2>
+                <div class="return__some-text">
+                    <p class="return__text">Компанія здійснює повернення та обмін цього товару відповідно до вимог законодавства. </p>
+                    <p class="return__text"><span class="text_bold">Повернення можливе протягом 14 днів</span> після отримання (для товарів належної якості).</p>
+                    <p class="return__text">Зворотній доставка товарів здійснюється за домовленістю.</p>
+                </div>
+              <p class="return__text">Згідно з чинним законодавством ви можете повернути товар належної якості або обміняти його, якщо:</p>
+              <ul class="return__list">
+                <li class="return__item">товар не був у вживанні і не має слідів використання споживачем: подряпин, сколів, потертостей, плям і т.п;</li>
+                <li class="return__item">товар повністю укомплектований і збережена фабрична упаковка;</li>
+                <li class="return__item">збережені всі ярлики і заводське маркування;</li>
+                <li class="return__item">товар зберігає товарний вигляд і свої споживчі властивості;</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+      <%- include("../modules/footer")%>
+    </div>
+    <%- include("../modules/header-script")%>
+  </body>
+</html>

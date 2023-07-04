@@ -1,0 +1,322 @@
+@font-face {
+  font-family: "Bluescreens";
+  src: local("Bluescreens-Bold"), url("/fonts/Bluescreens/Bluescreens-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"), url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Medium"), url("/fonts/Roboto/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"), url("/fonts/Roboto/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Regular"), url("/fonts/RobotoCondensed/RobotoCondensed-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Medium"), url("/fonts/RobotoCondensed/RobotoCondensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Bold"), url("/fonts/RobotoCondensed/RobotoCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.full-width-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 31.25%;
+  margin-bottom: 30px;
+}
+.full-width-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.some-images {
+  padding: 0 95px;
+  margin-bottom: 60px;
+}
+.some-images__container {
+  height: 115px;
+}
+.some-images__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.some-images__slide:hover .some-images__svg {
+  fill: #ed5432;
+}
+.some-images__slide:hover .some-images__text {
+  color: #ed5432;
+}
+.some-images__svg {
+  width: 58px;
+  height: 60px;
+  fill: #2B2B2B;
+  transition: fill 0.2s;
+}
+.some-images__text {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.some-images__button-prev, .some-images__button-next {
+  color: #2B2B2B;
+}
+.some-images__button-prev {
+  left: 40px;
+}
+.some-images__button-next {
+  right: 50px;
+}
+
+.catalog {
+  position: relative;
+  padding: 0 40px 40px;
+  margin-bottom: 40px;
+}
+.catalog__title {
+  margin-bottom: 30px;
+  font-family: "Bluescreens", "sans-serif";
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.catalog__pagination > span {
+  width: 15px;
+  height: 15px;
+  background-color: #ed5432;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px 20px 30px;
+  border: 1px solid #e8e8e8;
+  transition: box-shadow 1s;
+}
+.card > a {
+  flex-grow: 1;
+}
+.card__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card__stars {
+  display: flex;
+  justify-content: space-between;
+}
+.card__stars svg {
+  width: 14px;
+  height: 14px;
+}
+.card__heart > svg {
+  width: 20px;
+  height: 17px;
+  stroke: #D9D9D9;
+  fill: white;
+  transition: stroke 0.2s, fill 0.2s;
+}
+.card__heart > svg:hover {
+  stroke: #ed5432;
+}
+.card__heart-active > svg {
+  fill: #ed5432;
+  stroke: #ed5432;
+}
+.card__img {
+  position: relative;
+  max-width: 200px;
+  width: 100%;
+  height: 200px;
+  margin: 0 auto 10px;
+}
+.card__img > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__title {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+.card__weight {
+  position: relative;
+  max-width: 200px;
+  width: 100%;
+  height: 36px;
+  margin: 0 auto 20px;
+  font-size: 0.875rem;
+}
+.card__weight > select {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #f4f4f4;
+  appearance: none;
+}
+.card__weight > select:focus {
+  outline: 0;
+}
+.card__drop-down-weight {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.card__important {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__price {
+  font-weight: 700;
+}
+.card__button-buy {
+  height: 35px;
+  padding: 6px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #ed5432;
+  transition: background-color 0.2s;
+}
+.card__button-buy:hover {
+  background-color: #7da802;
+}
+
+.kitchen {
+  margin-bottom: 50px;
+}
+.kitchen__title {
+  padding: 40px;
+  font-family: "Bluescreens", "sans-serif";
+  font-size: 5.625rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.kitchen__img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 21.875%;
+}
+.kitchen__img > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kitchen__img > img:last-child {
+  animation: kitchenImg 8s infinite linear;
+}
+
+@keyframes kitchenImg {
+  0%, 100% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .kitchen__title {
+    font-size: 4.375rem;
+  }
+}
+@media (max-width: 1000px) {
+  .full-width-image {
+    padding-bottom: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .some-images {
+    padding: 0 50px;
+  }
+  .some-images__text {
+    font-size: 0.875rem;
+  }
+  .some-images__button-next {
+    right: 10px;
+  }
+  .some-images__button-prev {
+    left: 10px;
+  }
+  .kitchen__title {
+    padding: 20px;
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 600px) {
+  .some-images__svg {
+    width: 48px;
+    height: 48px;
+  }
+  .some-images__text {
+    font-size: 0.75rem;
+  }
+  .some-images__button-next::after, .some-images__button-prev::after {
+    font-size: 35px;
+  }
+  .catalog {
+    padding: 0 15px 40px;
+    margin-bottom: 30px;
+  }
+  .catalog__title {
+    margin-bottom: 20px;
+    font-size: 1.875rem;
+  }
+  .kitchen__title {
+    padding: 0 20px;
+  }
+  .kitchen__img {
+    padding-bottom: 170px;
+  }
+}
+
+/*# sourceMappingURL=main-home.css.map */

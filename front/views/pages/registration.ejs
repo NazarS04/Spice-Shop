@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <%- include("../modules/head")%>
+    <link rel="stylesheet" href="/scss/main-registration.css">
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("../modules/header")%>
+        <main class="main">
+            <div class="main__container">
+                <form class="form">
+                    <h1 class="form__title">РЕЄСТРАЦІЯ НА САЙТІ</h1>
+                    <div class="form__input form__input-email">
+                        <input type="email" placeholder="E-Mail">
+                    </div>
+                    <div class="form__input form__input-password password-input">
+                        <input class="password-input__input" type="password" placeholder="Пароль">
+                        <div class="password-input__eye">
+                            <img data-visible="false" src="/img/login-registration/close_eye.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="form__input form__input-password password-input">
+                      <input class="password-input__input" type="password" placeholder="Підтвердити пароль">
+                      <div class="password-input__eye">
+                          <img data-visible="false" src="/img/login-registration/close_eye.svg" alt="">
+                      </div>
+                  </div>
+                    <button class="form__submit">Зареєструватись</button>
+                    <a href="/login" class="form__have-account">Я маю обліковий запис</a>
+                </form>
+            </div>
+        </main>
+        <%- include("../modules/footer")%>
+    </div>
+    <%- include("../modules/header-script")%>
+    <script src="/js/main-login-registration.js"></script>
+</body>
+</html>

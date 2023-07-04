@@ -1,0 +1,83 @@
+@import "_general";
+
+.main{
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:80px 55px;
+
+    color:$secondBlack;
+    background: url("/img/error404/decor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__title {
+    font-size: 20rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: Bluescreens, sans-serif;
+  }
+
+  &__text{
+    margin-bottom: 50px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__link{
+    max-width: 260px;
+    width: 100%;
+    padding: 15px;
+
+    border-radius: 40px;
+    border: 1px solid $orange;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    color:$orange;
+    background-color: white;
+    transition:  color 0.5s, background 0.5s;
+
+    &:hover{
+      color:$white;
+      background: $orange;
+    }
+  }
+}
+
+@media(max-width: 900px){
+  .main{
+    &__container{
+      padding: 40px 15px;
+
+      background-position: right;
+    }
+
+    &__title{
+      font-size: 12.5rem;
+    }
+  }
+}
+
+@media(max-width:550px){
+  .main{
+    &__title{
+      margin-bottom: 10px;
+
+      font-size: 6.25rem;
+    }
+
+    &__text{
+      max-width: 250px;
+      margin-bottom: 30px;
+
+      text-align: center;
+    }
+  }
+}

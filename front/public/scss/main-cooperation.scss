@@ -1,0 +1,616 @@
+@import "_general";
+
+.main {
+  &__container {
+    padding: 30px 55px 80px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+
+    font-family: Bluescreens, sans-serif;
+    font-size: 2.625rem;
+    text-transform: uppercase;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.button{
+  padding: 10px 20px;
+
+  border-radius: 40px;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $orange;
+  color: white;
+  transition: background-color 0.5s;
+
+  &:hover{
+    background-color: $black;
+  }
+}
+
+.cooperation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:25px;
+
+  &__container {
+    max-width: 810px;
+    width: 100%;
+  }
+}
+
+.partners {
+  margin-bottom: 95px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.item-partner {
+  display: flex;
+  gap: 30px;
+  flex: 1 1 200px;
+
+  &__img {
+    position: relative;
+
+    width: 33px;
+    height: 33px;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    width: 100px;
+  }
+}
+
+.relation-to-products {
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:20px;
+  }
+}
+
+.item-relation-to-product {
+  flex: 1 1 180px;
+  max-width: 250px;
+
+  &__text {
+    & > span {
+      color: $orange;
+    }
+  }
+}
+
+.want-to-cooperate {
+  max-width: 900px;
+  min-width: 730px;
+  width: 100%;
+  padding: 35px 40px;
+
+  border-radius: 20px;
+  background-color: $gray;
+  background-image: url("/img/cooperation/decor_1.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    margin-bottom: 30px;
+  }
+
+  &__promo {
+    position: relative;
+
+    max-width: 185px;
+    width: 100%;
+    height: 185px;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    & > video {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__promo_unvisible {
+    & > img {
+      opacity: 0;
+    }
+  }
+
+  &__info {
+    max-width: 265px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 1.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px;
+
+    border-radius: 20px;
+    background-color: white;
+  }
+
+  &__second-title {
+    margin-bottom: 5px;
+  }
+
+  &__second-text {
+    font-size: 1.0625rem;
+  }
+}
+
+.modal-window-anketa{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 10;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 0 55px;
+
+  background:rgba(0,0,0,0.3);
+
+  &_active{
+    display: flex;
+  }
+}
+
+.modal-form{
+  position: relative;
+
+  max-width: 630px;
+  height: 740px;
+  padding: 45px 65px;
+
+  overflow: auto;
+  border-radius: 10px;
+  background-color: $white;
+
+  &__close{
+    position: absolute;
+    top:20px;
+    right: 20px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    &>div{
+      position: absolute;
+      top:50%;
+      left:0;
+
+      width: 100%;
+      height: 3px;
+
+      background: $black;
+
+      &:first-child{
+        transform: rotate(45deg);
+      }
+
+      &:last-child{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__title{
+    margin-bottom:25px;
+
+    text-align: center;
+  }
+
+  &__text{
+    margin-bottom: 15px;
+
+    font-size: 1.125rem;
+  }
+
+  &__input{
+    display: block;
+
+    width: 100%;
+    padding: 18px 25px;
+    margin-bottom: 15px;
+
+    border-radius: 30px;
+    background-color: $gray;
+    outline: 0;
+  }
+
+  &__email{
+    margin-bottom: 45px;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    gap:25px;
+
+    margin-bottom: 50px;
+
+    font-family: Roboto, sans-serif;
+  }
+
+  &__wrapper{
+    max-width: 235px;
+    width: 100%;
+  }
+
+  &__second-title{
+    margin-bottom: 25px;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    gap:20px;
+
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+
+  &__checkbox{
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $black;
+    cursor: pointer;
+
+    &_active{
+      position: relative;
+
+      background-color: $orange;
+      border-color: $orange;
+
+      &:after{
+        content: "";
+
+        position: absolute;
+        top:50%;
+        left:50%;
+
+        width: 12px;
+        height: 9px;
+
+        transform: translate(-50%,-50%);
+        background: url("/img/cooperation/checkbox.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__label{
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__submit{
+    display: block;
+
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 1294px) {
+  .cooperation{
+    flex-direction: column;
+    gap:50px;
+
+    &__container{
+      display: flex;
+      justify-content: space-between;
+      gap:60px;
+
+      max-width: none;
+    }
+  }
+
+  .partners{
+    margin-bottom: 0;
+
+    &__title{
+      margin-bottom: 30px;
+    }
+
+    &__items{
+      gap:20px;
+    }
+  }
+
+  .item-partner{
+    gap:20px;
+    flex-basis: 150px;
+  }
+
+  .relation-to-products{
+    &__title{
+      margin-bottom: 30px;
+    }
+  }
+
+  .item-relation-to-product{
+    max-width: none;
+  }
+
+  .want-to-cooperate{
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+@media(max-width:850px){
+  .cooperation{
+    &__container{
+      flex-direction: column;
+      gap:40px;
+    }
+  }
+
+  .item-partner{
+    flex-basis: 170px;
+    justify-content: center;
+  }
+
+  .want-to-cooperate{
+    padding: 15px 20px;
+
+    &__container{
+      align-items: start;
+      flex-direction: column;
+      gap:25px;
+    }
+
+    &__info{
+      max-width: 450px;
+    }
+
+    &__wrapper{
+      flex-direction: column;
+      gap:25px;
+
+      padding: 10px;
+    }
+
+    &__you-need{
+      text-align: center;
+    }
+  }
+
+  .modal-form{
+    height: 500px;
+  }
+}
+
+@media(max-width: 680px){
+  .modal-form{
+    padding: 25px;
+
+    &__close{
+      top:7px;
+      right:7px;
+    }
+  }
+}
+
+@media (max-width: 659px){
+  .main{
+    &__container{
+      padding: 30px 15px 40px;
+    }
+  }
+
+  .item-partner{
+    flex-basis: 150px;
+  }
+}
+
+@media(max-width:570px){
+  .modal-window-anketa{
+    padding: 0 25px;
+  }
+
+  .modal-form{
+    &__title{
+      font-size: 1.375rem;
+    }
+
+    &__input{
+      padding: 15px;
+    }
+
+    &__email{
+      margin-bottom: 30px;
+    }
+
+    &__container{
+      flex-direction: column;
+      align-items: center;
+      gap:40px;
+    }
+  }
+}
+
+@media(max-width: 450px){
+  .main{
+    &__title{
+      margin-bottom: 30px;
+    }
+  }
+
+  .partners{
+    &__title{
+      margin-bottom: 20px;
+
+      font-size: 1.25rem;
+    }
+  }
+
+  .item-partner{
+    gap:15px;
+
+    &__img{
+      width: 25px;
+      height: 25px;
+    }
+
+    &__text{
+      font-size: 0.875rem;
+    }
+  }
+
+  .relation-to-products{
+    &__title{
+      margin-bottom: 20px;
+
+      font-size: 1.25rem;
+    }
+  }
+
+  .item-relation-to-product{
+    &__text{
+      font-size: 0.875rem;
+    }
+  }
+
+  .want-to-cooperate{
+    padding: 10px 15px;
+
+    background-image: none;
+
+    &__container{
+      gap:20px;
+    }
+
+    &__promo{
+      margin: 0 auto;
+    }
+
+    &__title{
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    &__text{
+      font-size: 0.875rem;
+    }
+
+    &__second-title{
+      font-size: 1.25rem;
+    }
+
+    &__second-text{
+      font-size: 0.875rem;
+    }
+
+    &__wrapper{
+      gap: 20px;
+      padding: 10px 5px;
+    }
+
+    &__open-anketa{
+      font-size: 1rem;
+    }
+  }
+
+  .modal-form{
+    &__title{
+      font-size: 1.25rem;
+    }
+
+    &__second-title{
+      font-size: 0.875rem;
+    }
+
+    &__checkbox{
+      width: 15px;
+      height: 15px;
+    }
+
+    &__label{
+      font-size: 0.875rem;
+    }
+
+    &__container{
+      margin-bottom: 35px;
+    }
+
+    &__submit{
+      font-size: 1rem;
+    }
+  }
+}

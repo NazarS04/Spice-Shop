@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Bluescreens";
+  src: local("Bluescreens-Bold"), url("/fonts/Bluescreens/Bluescreens-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"), url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Medium"), url("/fonts/Roboto/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"), url("/fonts/Roboto/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Regular"), url("/fonts/RobotoCondensed/RobotoCondensed-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Medium"), url("/fonts/RobotoCondensed/RobotoCondensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed";
+  src: local("RobotoCondensed-Bold"), url("/fonts/RobotoCondensed/RobotoCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 55px;
+  color: #2a2a2a;
+  background: url("/img/error404/decor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main__title {
+  font-size: 20rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: Bluescreens, sans-serif;
+}
+.main__text {
+  margin-bottom: 50px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.main__link {
+  max-width: 260px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 40px;
+  border: 1px solid #ed5432;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: #ed5432;
+  background-color: white;
+  transition: color 0.5s, background 0.5s;
+}
+.main__link:hover {
+  color: #fff;
+  background: #ed5432;
+}
+
+@media (max-width: 900px) {
+  .main__container {
+    padding: 40px 15px;
+    background-position: right;
+  }
+  .main__title {
+    font-size: 12.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .main__title {
+    margin-bottom: 10px;
+    font-size: 6.25rem;
+  }
+  .main__text {
+    max-width: 250px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=main-error404.css.map */

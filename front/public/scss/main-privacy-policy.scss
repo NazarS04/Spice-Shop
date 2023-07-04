@@ -1,0 +1,72 @@
+@import "_general";
+
+.main{
+  &__container{
+    padding: 30px 55px 80px;
+  }
+}
+
+.information{
+  max-width: 1245px;
+  width: 100%;
+  margin: 0 auto;
+
+  font-family: Roboto, sans-serif;
+
+  &__important-text{
+    margin-bottom: 30px;
+
+    font-size: 1.375rem;
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+  }
+
+  &__second-title{
+    font-family: RobotoCondensed, sans-serif;
+    font-size: 1.125rem;
+  }
+}
+
+@media(max-width: 1000px){
+  .information{
+    &__important-text{
+      font-size: 1.125rem;
+    }
+
+    &__second-title{
+      font-size: 1rem;
+    }
+
+    &__text{
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width:700px){
+  .main{
+    &__container{
+      padding: 30px 15px 40px;
+    }
+  }
+}
+
+@media(max-width: 500px){
+  .information{
+    &__important-text{
+      font-size: 1rem;
+    }
+
+    &__second-title{
+      text-align: center;
+    }
+
+    &__wrapper{
+      gap:15px;
+    }
+  }
+}

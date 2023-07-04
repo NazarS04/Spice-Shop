@@ -1,0 +1,334 @@
+@import "_general";
+
+.main{
+  font-family: "Roboto", sans-serif;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+
+    padding: 30px 55px 80px;
+  }
+}
+
+.title{
+  margin-bottom: 35px;
+
+  font-size: 2.625rem;
+  font-family: "Bluescreens", sans-serif;
+  text-transform: uppercase;
+}
+
+.text_bold{
+  font-weight: 700;
+}
+
+.delivery{
+  max-width: 710px;
+  width: 100%;
+
+  &__text{
+    margin-bottom: 35px;
+  }
+
+  &__items{
+    margin-bottom: 45px;
+  }
+
+  &__ps{
+    font-size: 0.875rem;
+  }
+}
+
+.item-delivery{
+  display: flex;
+  justify-content: space-between;
+  gap:15px;
+
+  max-width: 600px;
+  width: 100%;
+  padding: 25px 0;
+
+  &:not(:last-child){
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  &__img{
+    position: relative;
+
+    min-width: 68px;
+    height: 46px;
+
+    &>img{
+      position: absolute;
+      top:0;
+      left:0;
+
+      width: 100%;
+      height:100%;
+
+      object-fit: contain;
+    }
+  }
+
+  &__container{
+    max-width: 445px;
+    width: 100%;
+  }
+
+  &__title{
+    font-size: 1.125rem;
+  }
+
+  &__text{
+    font-size: 0.875rem;
+  }
+
+  &__tel{
+    white-space: nowrap;
+  }
+}
+
+.item-delivery-has-time{
+
+  .item-delivery{
+    &__text{
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.item-delivery-pickup{
+  .item-delivery{
+    &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 10px;
+    }
+
+    &__text{
+      line-height: 129%;
+    }
+
+    &__tel,&__map{
+      text-decoration: underline;
+      transition: color 0.3s;
+
+      &:hover{
+        color:$orange;
+      }
+    }
+  }
+}
+
+.payment-and-return{
+  max-width: 875px;
+  width: 100%;
+
+  background: url("/img/payment-delivery/decor.png");
+  background-repeat: no-repeat;
+  background-size: 576px auto;
+  background-position: right top;
+}
+
+.payment{
+  margin-bottom: 85px;
+
+  &__images{
+    display: flex;
+    gap:15px;
+
+    margin-bottom: 35px;
+  }
+
+  &__text{
+    &:not(:last-child){
+      margin-bottom: 35px;
+    }
+  }
+
+  &__text-delivery-note{
+    &>div:last-child{
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.return{
+  &__some-text{
+    max-width: 710px;
+    margin-bottom: 35px;
+  }
+
+  &>&__text{
+    max-width: 710px;
+    margin-bottom: 35px;
+
+    font-weight: 700;
+  }
+
+  &__list{
+    list-style-position: inside;
+  }
+
+  &__item{
+    margin-bottom: 10px;
+
+    line-height: 130%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .payment-and-return{
+    background-size: 400px auto;
+  }
+}
+
+@media(max-width: 1080px){
+  .main{
+    &__container{
+      flex-direction: column;
+    }
+  }
+
+  .delivery{
+    max-width: none;
+
+    &__item{
+      margin: 0 auto;
+    }
+  }
+
+  .payment-and-return{
+    max-width: none;
+  }
+
+  .payment{
+    margin-bottom: 50px;
+  }
+
+  .title{
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+}
+
+@media(max-width:660px){
+  .payment-and-return{
+    background-size: 300px auto;
+  }
+
+  .title{
+    margin-bottom: 15px;
+
+    font-size: 1.875rem;
+  }
+
+  .text{
+    margin-bottom: 25px;
+
+    font-size: 0.75rem;
+  }
+
+  .delivery{
+    &__items{
+      margin-bottom: 25px;
+    }
+
+    &__ps{
+      font-size: 0.75rem;
+    }
+  }
+
+  .item-delivery{
+    align-items: center;
+
+    padding: 15px 0;
+
+    &__title{
+      font-size: 1rem;
+    }
+
+    &__text{
+      font-size:0.75rem;
+    }
+  }
+
+
+}
+
+@media (max-width: 560px) {
+  .main{
+    &__container{
+      padding: 30px 15px 40px;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .item-delivery-pickup{
+
+    .item-delivery {
+      &__wrapper {
+        flex-direction: column;
+        align-items: start;
+        gap:10px;
+      }
+    }
+  }
+
+  .return{
+    &__text{
+      font-size: 0.875rem;
+    }
+
+    &__some-text{
+      margin-bottom: 25px;
+    }
+
+    &__item{
+      font-size: 0.875rem;
+    }
+
+    &>&__text{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .item-delivery{
+    &__img{
+      min-width: 50px;
+    }
+  }
+
+  .payment-and-return{
+    background: none;
+  }
+
+  .payment{
+
+    &__title{
+      margin-bottom: 25px;
+    }
+
+    &__images{
+      justify-content: center;
+
+      margin-bottom: 20px;
+    }
+
+    &__text{
+      text-align: center;
+
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <%- include("../modules/head") %>
+    <link rel="stylesheet" href="/scss/main-category.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <%- include("../modules/header") %>
+    <main class="main">
+        <div class="main__container">
+            <section class="category">
+                <div class="category__top">
+                    <h1 class="category__title"><%= title%></h1>
+                    <div class="category__box">
+                        <div class="category__sort sort">
+                            <div class="sort__name">Сортувати:</div>
+                            <a class="sort__link sort__link_active" href="##"
+                            >від дешевих до дорогих</a
+                            >
+                            <a class="sort__link" href="##"> від дорогих до дешевих</a>
+                        </div>
+                        <button class="category__button-open-filter">
+                            <img src="/img/category/filter.svg" alt="">
+                            <span>фільтрувати</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="category__container">
+                    <aside class="category__filter filter">
+                        <div class="filter__box">
+                            <h2 class="filter__mobil-title">фільтрувати</h2>
+                            <button class="filter__button-close"><img src="/img/category/arrow_white.svg" alt=""></button>
+                        </div>
+                        <div class="filter__wrapper">
+                            <h3 class="filter__title">Смакує до</h3>
+                            <div class="filter__items">
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Випічки</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Десертів</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Кондитерських виробів</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Макаронних виробів</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Маринадів</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Морепродуктів</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Напоїв</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Настоянок</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Піци</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Перших страв</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Салатів</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Мʼяса</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__wrapper">
+                            <h3 class="filter__title">Спеції</h3>
+                            <div class="filter__items">
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Аніс</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Гриби</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Куркума</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Пажитник</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Цибуля</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Горіх мускатний</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Паприка</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Імбир</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Лавровий лист</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Шафран</label>
+                                </div>
+                                <div class="filter__item">
+                                    <div class="filter__checkbox"></div>
+                                    <label class="filter__label">Базилік</label>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="category__cards">
+                        <%for(let i =0;i<products.length;i++){%>
+                        <div class="card">
+                            <div class="card__icons">
+                                <div class="card__stars">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="card__heart">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#heart"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <a href="/<%=products[i].categoryId%>/<%=products[i].id%>" class="card__link">
+                                <div class="card__img">
+                                    <img
+                                            src="/img/products-img/<%=products[i].img_name%>"
+                                            alt="<%=products[i].name%>"
+                                    />
+                                </div>
+                                <h3 class="card__title"><%=products[i].name%></h3>
+                            </a>
+                            <div class="card__weight">
+                                <select>
+                                    <option value="100" selected>100г</option>
+                                    <option value="250">250г</option>
+                                    <option value="500">500г</option>
+                                    <option value="1000">1 кг</option>
+                                    <option value="2000">Опт від 2 до 5 кг</option>
+                                    <option value="5000">Опт від 5 до 25 кг</option>
+                                    <option value="25000">Опт від 25 кг</option>
+                                </select>
+                                <div class="card__drop-down-weight">
+                                    <img
+                                            src="/img/dropdown.svg"
+                                            alt="Іконка випадаючого меню вібору ваги продукту"
+                                    />
+                                </div>
+                            </div>
+                            <div class="card__important">
+                                <span class="card__price"><%=products[i].price.toFixed(2)%> грн</span>
+                                <button class="card__button-buy">
+                                    <img
+                                            src="/img/home/buy.svg"
+                                            alt="Іконка додати до кошику"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <%}%>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include("../modules/footer") %>
+</div>
+<%- include("../modules/header-script") %>
+<script src="/js/main-category.js"></script>
+</body>
+</html>

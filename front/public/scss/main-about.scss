@@ -1,0 +1,302 @@
+@import "_general";
+
+.main {
+  &__container {
+    padding: 30px 55px 80px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-family: Bluescreens, sans-serif;
+    font-weight: 700;
+    font-size: 2.625rem;
+    text-transform: uppercase;
+  }
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px 50px;
+
+  margin-bottom: 100px;
+
+  &__title {
+    max-width: 460px;
+    width: 100%;
+
+    font-size: 5.5rem;
+    font-family: Bluescreens, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    position: relative;
+
+    max-width: 611px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 44.7%;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__inform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    max-width: 535px;
+    width: 100%;
+  }
+
+  &__text {
+    font-family: Roboto, sans-serif;
+    font-size: 1.25rem;
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+}
+
+.red-text {
+  color: $orange;
+}
+
+.our-team {
+  &__info {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 50px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: Bluescreens, sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+  }
+
+  &__container {
+    position: relative;
+
+    max-width: 1270px;
+    padding: 0 90.5px;
+    margin: 0 auto;
+  }
+
+  &__button-prev::after, &__button-next::after {
+    color: #2B2B2B;
+    font-size: 60px;
+    font-weight: 900;
+  }
+}
+
+.worker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    position: relative;
+
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 30px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__position {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 1400px) {
+  .about-us {
+    &__title {
+      font-size: 4.375rem;
+    }
+
+    &__text {
+      font-size: 1.125rem;
+    }
+  }
+
+  .our-team{
+    &__title{
+      font-size: 4.375rem;
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .about-us {
+    flex-wrap: wrap;
+
+    &__img {
+      max-width: 420px;
+      padding-bottom: 490px;
+    }
+
+    &__inform {
+      max-width: none;
+      flex: 1 1 350px;
+    }
+  }
+}
+
+@media(max-width: 1039px) {
+  .about-us {
+    &__title {
+      max-width: none;
+
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 929px) {
+  .main{
+    &__container{
+      padding-bottom: 40px;
+    }
+  }
+
+  .about-us {
+    justify-content: center;
+
+    margin-bottom: 50px;
+
+    &__title {
+      font-size: 3.125rem;
+    }
+  }
+
+  .our-team {
+    &__title{
+      font-size: 3.125rem;
+    }
+
+    &__button-next::after, &__button-prev::after {
+      font-size: 40px;
+    }
+  }
+}
+
+@media(max-width: 649px) {
+  .main {
+    &__container {
+      padding: 30px 15px 40px;
+    }
+  }
+
+  .about-us {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .our-team {
+    &__info{
+      margin-bottom: 30px;
+    }
+
+    &__container {
+      padding: 0 50px;
+    }
+
+    &__title{
+      margin-bottom: 15px;
+
+      font-size: 2.5rem;
+    }
+
+    &__button-next {
+      right: 0;
+    }
+
+    &__button-prev {
+      left: 0;
+    }
+
+  }
+}
+
+@media(max-width: 461px) {
+  .about-us {
+    &__title {
+      font-size: 1.875rem;
+    }
+
+    &__img {
+      max-width: 300px;
+      padding-bottom: 400px;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+  }
+
+  .our-team{
+    &__title{
+      font-size: 1.875rem;
+    }
+
+    &__text{
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media(max-width: 400px){
+  .our-team{
+    &__container{
+      max-width: 250px;
+    }
+  }
+}

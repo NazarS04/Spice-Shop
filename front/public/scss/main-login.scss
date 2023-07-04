@@ -1,0 +1,141 @@
+@import "_general";
+
+.main{
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: 30px 55px 80px;
+
+    background: url("/img/login-registration/decor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+
+  max-width: 375px;
+  width: 100%;
+
+  &__title{
+    margin-bottom: 40px;
+
+    font-size: 2.625rem;
+    font-family: Bluescreens, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__input{
+    width: 100%;
+    margin-bottom: 13px;
+
+    &>input{
+      display: block;
+
+      width: 100%;
+      padding: 18px 25px;
+
+      border-radius: 30px;
+      border:1px solid black;
+      font-family: Roboto, sans-serif;
+      font-size: 0.9375rem;
+      background-color: #f4f4f4;
+      outline: 0;
+    }
+  }
+
+  &__input-password{
+    margin-bottom: 25px;
+  }
+
+  &__dont-know-password{
+    margin-bottom: 20px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 0.8125rem;
+    color:#acacac;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__submit{
+    margin-bottom: 35px;
+    padding: 15px 20px;
+
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color:$white;
+    background-color: $orange;
+    cursor: pointer;
+  }
+
+  &__want-to-registration{
+    display: block;
+
+    margin-bottom: 40px;
+
+    font-size: 1.125rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  &__warning-massage{
+    font-family: Roboto, sans-serif;
+    font-size: 0.75rem;
+    text-align: center;
+    color:$black;
+
+    &>a{
+      color:inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+.password-input{
+  position: relative;
+
+  &__eye{
+    position: absolute;
+    top:50%;
+    right: 0;
+
+    width: 17px;
+    height: 17px;
+
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+  }
+}
+
+@media(max-width:500px){
+  .main{
+    &__container{
+      padding: 30px 15px 40px;
+    }
+  }
+
+  .form{
+    &__title{
+      margin-bottom: 20px;
+    }
+
+    input{
+      padding: 15px 25px;
+    }
+
+    &__want-to-registration{
+      margin-bottom: 25px;
+    }
+  }
+}
